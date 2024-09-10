@@ -13,8 +13,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [solution link](https://www.frontendmentor.io/solutions/rating-component-with-css-and-js-M92JI7k3wU)
-- Live Site URL: [live demo link](https://emanradwan114.github.io/RatingComponent/)
+- [Live Site URL](https://emanradwan11499.github.io/RatingComponent/)
 
 ### Built with
 
