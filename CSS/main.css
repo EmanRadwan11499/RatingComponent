@@ -1,0 +1,177 @@
+/* * start of general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: rgb(249, 120, 16);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: rgb(30, 37, 48);
+  --veryDarkBlue: rgb(19, 21, 25);
+  background-color: var(--veryDarkBlue);
+  font-family: "Overpass", sans-serif;
+}
+/* * end of general styles */
+
+/* * start of common styles */
+main,
+.ratingNo,
+.userRating,
+.starImg,
+.rateValue {
+  display: flex;
+  align-items: center;
+}
+main,
+.ratingNo,
+.starImg,
+.rateValue {
+  justify-content: center;
+}
+.rateContent,
+.ratingNo,
+.starImg {
+  background-color: rgb(38, 47, 58);
+}
+.ratingNo,
+.starImg {
+  padding: 1.5rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.userRating,
+.starImg,
+.cardTitle,
+.submitMsg img,
+.rateValue,
+.rateValue ~ h2 {
+  margin-bottom: 1.5rem;
+}
+
+.userRating {
+  margin-top: 1.5rem;
+}
+
+.cardTitle ~ p,
+.ratingNo,
+.rateValue ~ p {
+  color: var(--mediumGrey);
+}
+
+button[type="submit"],
+.cardTitle,
+.ratingNo:hover,
+.rateValue ~ h2 {
+  color: var(--white);
+}
+
+.ratingNo,
+label,
+button[type="submit"] {
+  cursor: pointer;
+}
+
+.ratingNo,
+button[type="submit"] {
+  transition: background-color 500ms, color 500ms;
+}
+
+button[type="submit"]:hover,
+.rateContent {
+  color: var(--orange);
+}
+button[type="submit"],
+.rateContent {
+  border-radius: 30px;
+}
+/* * end of common styles */
+
+/* * start of rating component styles */
+main {
+  min-height: 100vh;
+}
+.ratingSec {
+  background-color: var(--darkBlue);
+  padding: 2.3rem 2rem;
+  border-radius: 20px;
+  width: 25%;
+}
+
+.userRating {
+  justify-content: space-between;
+}
+.ratingForm input[type="radio"] {
+  appearance: none;
+  display: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: var(--orange);
+  border: none;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--white);
+}
+
+.ratingNo:hover {
+  background-color: var(--orange);
+}
+
+.submitMsg {
+  text-align: center;
+  display: none;
+}
+
+.rateValue {
+  text-align: center;
+}
+
+.rateContent {
+  padding: 0.5rem 1rem;
+}
+
+.selected {
+  background-color: var(--mediumGrey);
+  color: var(--white);
+}
+/* * end of rating component styles */
+
+/* *start of media query */
+@media screen and (max-width: 576px) {
+  .ratingSec {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 576.1px) and (max-width: 768px) {
+  .ratingSec {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768.1px) and (max-width: 992px) {
+  .ratingSec {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992.1px) and (max-width: 1200px) {
+  .ratingSec {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1200.1px) and (max-width: 1350px) {
+  .ratingSec {
+    width: 30%;
+  }
+}
+/* *end of media query */
